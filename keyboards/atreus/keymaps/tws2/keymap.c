@@ -14,9 +14,9 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QW] = { /* Qwerty */
   {KC_Q,    KC_W,    KC_E,    KC_R,          KC_T,    KC_TRNS,  KC_Y,    KC_U,     KC_I,    KC_O,     KC_P    },
-  {KC_A,    KC_S,    KC_D,    KC_F,          KC_G,    KC_TRNS,  KC_H,    KC_J,     KC_K,    KC_L,     KC_SCLN },
+  {MT(MOD_LSFT, KC_A),    MT(MOD_LCTL, KC_S),    MT(MOD_LALT, KC_D),    KC_F,          KC_G,    KC_TRNS,  KC_H,    KC_J,     MT(MOD_RALT, KC_K),    MT(MOD_RCTL, KC_L),     MT(MOD_RSFT, KC_SCLN) },
   {KC_Z,    KC_X,    KC_C,    KC_V,          KC_B,    OSM(MOD_LCTL),  KC_N,    KC_M,     KC_COMM, KC_DOT,   KC_SLSH },
-  {KC_ESC,  KC_TAB,  KC_LGUI, OSM(MOD_LSFT), KC_BSPC, OSM(MOD_LALT),  KC_SPC,  OSL(_RS), KC_MINS, KC_EQUAL, KC_ENT  }
+  {KC_ESC,  KC_TAB,  KC_LGUI, OSM(MOD_LSFT), KC_BSPC, OSM(MOD_LALT),  KC_FN0,  OSL(_RS), KC_MINS, KC_EQUAL, KC_ENT  }
 },
 /*
  *  !       @     #     $     %        ||     ^    &     *     (    )
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 }};
 
 const uint16_t PROGMEM fn_actions[] = {
-
+    [0] = ACTION_LAYER_TAP_KEY(_LW, KC_SPC), // to layer 1 while held, space when tapped
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
