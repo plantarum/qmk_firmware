@@ -11,6 +11,7 @@ These configuration files are specifically for the Atreus keyboards created by P
 
 A-Star:\
 `make atreus:default:avrdude`
+`make atreus:tws2:avrdude`
 
 Teensy:\
 `make TEENSY2=yes atreus:default:teensy`
@@ -28,3 +29,11 @@ while [ ! -r /dev/ttyACM0 ]; do sleep 1; done
 avrdude -p atmega32u4 -c avr109 -U flash:w:atreus_tws2.hex -P /dev/ttyACM0
 ```
 
+Resetting the board manually:
+
+[Reviving using AVRDUDE](https://www.pololu.com/docs/0J61/10.2)
+[Pinout](./astar-pinout-jpg)
+
+```
+avrdude -p atmega32u4 -c avr109 -P /dev/ttyACM0 -e
+```
