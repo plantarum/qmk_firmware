@@ -21,15 +21,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 /*
  *  !       @     #     $     %        ||     ^    &     *     (    )
- *  1       2     3     4     5        ||     6    7     8     9    10
+ *  1       2     3     4     5        ||     6    7     8     9    0
  *  [       ]     {     }     `        ||     ~    '     "     \    |
- * lower  insert super shift del  ctrl || alt space   fn    .     0    =
+ * lower  insert super shift del  ctrl || alt sp   fn    .     -    =
  */
 [_RS] = { /* [> RAISE <] */
   {KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_TRNS, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN},
   {KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_TRNS, KC_6,    KC_7,    KC_8,    KC_9,    KC_0},
   {KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_GRV,  KC_TRNS, KC_TILD, KC_QUOT, KC_DQT,  KC_BSLS, KC_PIPE},
-  {TG(_LW), KC_INS,  KC_LGUI, KC_TRNS, KC_DELT, KC_TRNS, KC_SPC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS}
+  {TG(_LW), KC_INS,  KC_LGUI, KC_TRNS, KC_DELT, KC_TRNS, KC_SPC,  KC_TRNS, KC_DOT, KC_TRNS, KC_TRNS}
 },
 /*
  * insert home   up  end   pgup       ||      up     F7    F8    F9   F10
